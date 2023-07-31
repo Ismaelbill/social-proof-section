@@ -1,0 +1,203 @@
+:root {
+    --Very-Dark-Magenta: #502050;
+    --Soft-Pink: #ee68a4;
+
+    --Dark-Grayish-Magenta: #937b92;
+    --Light-Grayish-Magenta: #f7f2f7;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body { /*4, 5, 7*/
+    font-family: 'League Spartan', sans-serif;
+}
+
+
+.parent {
+    padding: 0 0.7rem;
+    min-height: 100vh;
+    background-image: url(../images/bg-pattern-top-desktop.svg),
+    url(../images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top left, right bottom;
+    background-size: 40%, 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent .container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.parent .container .upper-at-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.parent .container .upper-at-container .textsSide,
+.parent .container .upper-at-container .reviewsSide {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.parent .container .upper-at-container .textsSide h1 {
+    color: var(--Very-Dark-Magenta);
+    font-size: 3rem;
+    width: 70%;
+}
+
+.parent .container .upper-at-container .textsSide p {
+    color: var(--Dark-Grayish-Magenta);
+    width: 70%;
+    font-weight: 500;
+}
+
+
+.parent .container .upper-at-container .reviewsSide .rev {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--Light-Grayish-Magenta);
+    padding: 1.2rem 3rem;
+    border-radius: .3rem;
+    width: 80%;
+}
+
+.parent .container .upper-at-container .reviewsSide .rev h3 {
+    color: var(--Very-Dark-Magenta);
+    font-size: 1rem;
+}
+
+.parent .container .upper-at-container .reviewsSide .rev .stars {
+    display: flex; gap: 0.3rem;
+}
+
+.parent .container .upper-at-container .reviewsSide .rev .stars img {
+    width: 1rem;
+}
+
+
+.parent .container .upper-at-container .reviewsSide .s-rev {
+    transform:translateX(2rem)
+}
+
+.parent .container .upper-at-container .reviewsSide .t-rev {
+    transform:translateX(4rem)
+}
+
+/* start lower-at-container */
+
+.parent .container .lower-at-container {
+    display: flex;
+    gap: 1.5rem;
+    width: 96%;
+}
+.parent .container .lower-at-container .card {
+    background-color: var(--Very-Dark-Magenta);
+    width: calc(95%/3);
+    border-radius: 0.5rem;
+    padding: 2rem;
+}
+
+.parent .container .lower-at-container .s-card {
+    transform: translateY(1.5rem);
+}
+
+.parent .container .lower-at-container .t-card {
+    transform: translateY(3rem);
+}
+
+.parent .container .lower-at-container .card header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--Light-Grayish-Magenta);
+    font-weight: 400;
+}
+
+.parent .container .lower-at-container .card header img {
+    width: 2.5rem;
+    border-radius: 50%;
+}
+
+.parent .container .lower-at-container .card header h4::after {
+    content: "Verified Buyer";
+    font-weight: 400;
+    color: var(--Soft-Pink);
+    display: block;
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+}
+
+.parent .container .lower-at-container .card q {
+    display: block;
+    color: var(--Light-Grayish-Magenta);
+    font-size: 0.9rem;
+    margin-top: 0.8rem;
+    line-height: 1.3;
+}
+
+
+@media (max-width: 1024px) {
+    .parent {
+        padding: 1rem 0;
+        background-image: url(../images/bg-pattern-top-mobile.svg),
+        url(../images/bg-pattern-bottom-mobile.svg);
+        background-size: 100%, 100%;
+    }
+    .parent .container {
+        width: 95%;
+        padding: 2rem 0 3rem;
+        align-items: center;
+    }
+    .parent .container .upper-at-container { 
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .parent .container .upper-at-container .textsSide,
+    .parent .container .upper-at-container .reviewsSide,
+    .parent .container .upper-at-container .textsSide h1,
+    .parent .container .upper-at-container .textsSide p {
+        width: 95%;
+    }
+    .parent .container .upper-at-container .textsSide h1 {
+        font-size: 2.5rem;
+    }
+    .parent .container .upper-at-container .reviewsSide {
+        flex-direction: column;
+
+    }
+    .parent .container .upper-at-container .reviewsSide .rev {
+        width: 100%;
+        transform: translateX(0);
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .parent .container .lower-at-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+    }
+    .parent .container .lower-at-container .card {
+        width: 100%;
+    }
+
+
+
+
+
+}
